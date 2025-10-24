@@ -120,22 +120,26 @@ def main() -> None:
     }
 
     while True:
-        print("=== HVAC Customer Tracker ===")
+        print("\n" + "=" * 40)
+        print("HVAC CUSTOMER TRACKER".center(40))
+        print("=" * 40)
         print("1. Add customer")
-        print("2. View customers")
+        print("2. View all customers")
         print("3. Search customer")
         print("4. Exit")
+        print("=" * 40)
 
-        choice = input("Enter choice: ").strip()
+        choice = input("\nEnter your choice (1-4): ").strip()
+
         if choice == "4":
-            print("Goodbye!")
+            print("\nGoodbye! 👋\n")
             break
 
         action = actions.get(choice)
         if action:
             action()
         else:
-            print("Invalid choice.\n")
+            print("\n❌ Invalid choice. Please enter 1-4.\n")
 
 
 if __name__ == "__main__":
